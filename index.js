@@ -8,12 +8,7 @@ const { Connection, PublicKey, Keypair, SystemProgram, Transaction, sendAndConfi
 const mongoose = require('mongoose');
 
 // Set up MongoDB connection
-mongoose.connect(process.env.MONGODB_CONNECTION, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true, // Remove this line
-  useCreateIndex: true, // Add this line
-  useFindAndModify: false, // Add this line
-});
+mongoose.connect(process.env.MONGODB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const User = mongoose.model('User', {
   telegramId: Number,
