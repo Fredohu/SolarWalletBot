@@ -44,7 +44,7 @@ bot.onText(/\/start/, async (msg) => {
       });
       await user.save();
   
-      bot.sendMessage(chatId, `Welcome! Your Solana wallet has been created.\nYour public key: ${publicKey}`);
+      bot.sendMessage(chatId, `Welcome to SolarBot! Your Solana wallet has been created.\nYour public key: ${publicKey}`);
       bot.sendMessage(chatId, `Keep your private key secure. If lost, it cannot be recovered.\nYour encrypted private key: ${privateKey}`);
     } else {
       bot.sendMessage(chatId, `Welcome back! Your Solana wallet already exists.\nYour public key: ${user.solanaPublicKey}`);
