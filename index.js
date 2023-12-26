@@ -7,6 +7,18 @@ const SPLTokenMetadata = require('@solana/spl-token-metadata');
 const { Connection, PublicKey, Keypair, SystemProgram, Transaction, sendAndConfirmTransaction } = require('@solana/web3.js');
 const mongoose = require('mongoose');
 
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server running at https://solarwalletbot.onrender.com:${port}`);
+});
+
 // Set up MongoDB connection
 mongoose.connect(process.env.MONGODB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true });
 
