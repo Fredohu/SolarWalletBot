@@ -191,7 +191,7 @@ bot.onText(/\/deploy/, async (msg) => {
 
         if (confirmationCommand === '/confirm') {
             // Call the createToken function with the collected token details
-            await createToken(tokenDetails, user.solanaPublicKey, chatId);
+            await createToken(tokenDetails, user.solanaPublicKey, user.solanaPrivateKey, chatId);
           // ...
   
           bot.sendMessage(chatId, 'Token deployment in progress...');
