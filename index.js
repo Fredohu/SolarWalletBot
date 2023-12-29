@@ -29,7 +29,7 @@ const User = mongoose.model('User', {
 });
 
 // Set up Solana connection
-const connection = new web3.Connection('https://api.devnet.solana.com', 'confirmed');
+const connection = new web3.Connection('https://nd-519-484-423.p2pify.com/bc9e10de7353a7f22ee2a6d2fdd5f6e3', 'confirmed');
 
 // Set up Telegram bot
 const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: true });
